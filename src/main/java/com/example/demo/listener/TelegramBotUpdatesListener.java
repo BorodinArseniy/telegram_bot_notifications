@@ -67,6 +67,7 @@ public class TelegramBotUpdatesListener implements UpdatesListener {
                             notificationTask.setMessage(txt);
                             notificationTask.setNotificationDateTime(dateTime);
                             notificationTaskService.save(notificationTask);
+                            sendMessage(chatId, "Notification is saved");
                         }
                     }else {
                         sendMessage(chatId, "Некорректный формат сообщения");
